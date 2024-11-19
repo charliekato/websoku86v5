@@ -78,7 +78,7 @@ namespace websoku86v5
             Misc.WriteIniFile(iniFile, txtBoxMDBFile.Text,
                 txtBoxHtmlPath.Text, txtBoxIndexFile.Text, txtBoxPrgResult.Text, txtBoxRanking.Text,
                 txtBoxScoreFile.Text, txtBoxHostName.Text, txtBoxPort.Text,
-                txtBoxUserName.Text, txtBoxKeyFile.Text);
+                /*txtBoxUserName.Text,*/ txtBoxKeyFile.Text);
             Html.CreateHTML(
                 txtBoxMDBFile.Text,
                 workDir,
@@ -131,7 +131,7 @@ namespace websoku86v5
             Misc.WriteIniFile(iniFile, txtBoxMDBFile.Text,
                 txtBoxHtmlPath.Text, txtBoxIndexFile.Text, txtBoxPrgResult.Text, txtBoxRanking.Text,
                 txtBoxScoreFile.Text, txtBoxHostName.Text, txtBoxPort.Text,
-                txtBoxUserName.Text, txtBoxKeyFile.Text);
+                /*txtBoxUserName.Text,*/ txtBoxKeyFile.Text);
             this.Close();
         }
         private void btnMDBFile_Click(object sender, EventArgs e)
@@ -1431,7 +1431,7 @@ namespace websoku86v5
                                           string scoreFile,
                                           string hostName,
                                           string port,
-                                          string userName,
+                                          //string userName,
                                           string keyFile)
         {
             System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
@@ -1445,7 +1445,7 @@ namespace websoku86v5
                 sw.WriteLine($"scoreFile>{scoreFile}");
                 sw.WriteLine($"hostName>{hostName}");
                 sw.WriteLine($"port>{port}");
-                sw.WriteLine($"userName>{userName}");
+                //sw.WriteLine($"userName>{userName}");
                 sw.WriteLine($"keyFile>{keyFile}");
             }
         }
